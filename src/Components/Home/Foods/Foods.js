@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useHistory } from "react";
 import { Nav, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useFoods from "../../../Hooks/useFoods";
 import Food from "../Food/Food";
 import "./Foods.css";
@@ -7,10 +8,15 @@ import "./Foods.css";
 const Foods = () => {
   const [menu] = useFoods();
   const [type, setType] = useState("Breakfast");
+  // const history = useHistory();
   // foodtype handling
   const handleMenu = (menuType) => {
     setType(menuType);
   };
+
+  /* const handleCheckOut = () => {
+    history.push("/checkout");
+  }; */
 
   // filtering food
   return (
@@ -49,11 +55,13 @@ const Foods = () => {
         {menu
           ?.filter((fd) => fd.type === type)
           .map((food) => (
-            <Food food={food}></Food>
+            <Food key={food.id} food={food}></Food>
           ))}
       </Row>
       <div className="text-center mt-5">
-        <button className="checkout-btn">Check Out Your Food</button>
+        <Link to="/checkout">
+          <button className="checkout-btn">Check Out Your Food</button>
+        </Link>
       </div>
     </div>
   );

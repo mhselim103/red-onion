@@ -7,12 +7,14 @@ const LogIn = () => {
   const location = useLocation();
   const { signInUsingGoogle, setIsLoading } = useAuth();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/shop";
+  const redirect_uri = location.state?.from || "/home";
+  console.log(location.state?.from);
 
   const handleSignIn = () => {
     signInUsingGoogle()
       .then((result) => {
         history.push(redirect_uri);
+        console.log(result);
       })
       .finally(() => setIsLoading(false));
   };
@@ -20,7 +22,7 @@ const LogIn = () => {
     <div className="banner d-flex justify-content-center">
       <div>
         <h1>Log In</h1>
-        <form onSubmit="">
+        <form>
           <input
             type="email"
             name="email"
@@ -29,8 +31,6 @@ const LogIn = () => {
           />
           <br />
           <input type="password" name="password" id="password" />
-          <br />
-          <input type="submit" value="Submit" />
         </form>
         <p>
           New to Red-Onion? <Link to="/register">Register</Link>

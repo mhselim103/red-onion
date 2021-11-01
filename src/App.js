@@ -7,6 +7,8 @@ import LogIn from "./Components/Login/Login";
 import Header from "./Components/Shared/Header/Header";
 import Register from "./Components/Register/Register";
 import Footer from "./Components/Shared/Footer/Footer";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
@@ -23,9 +25,12 @@ function App() {
           <Route exact path="/login">
             <LogIn></LogIn>
           </Route>
-          <Route exact pathc="/register">
+          <Route exact path="/register">
             <Register></Register>
           </Route>
+          <PrivateRoute exact path="/checkout">
+            <Checkout></Checkout>
+          </PrivateRoute>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

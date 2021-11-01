@@ -19,6 +19,7 @@ const Qualities = () => {
         <Col className="col-md-4">
           <Card>
             <img
+              className="img-fluid"
               src="https://i.ibb.co/WxsKpHn/adult-blur-blurred-background-687824.png"
               alt=""
             />
@@ -33,6 +34,7 @@ const Qualities = () => {
         <Col className="col-md-4">
           <Card>
             <img
+              className="img-fluid"
               src="https://i.ibb.co/Qb6J07d/architecture-building-city-2047397.png"
               alt=""
             />
@@ -46,7 +48,11 @@ const Qualities = () => {
         </Col>
         <Col className="col-md-4">
           <Card>
-            <img src="https://i.ibb.co/5shKKMk/Group-1151.png" alt="" />
+            <img
+              className="img-fluid"
+              src="https://i.ibb.co/5shKKMk/Group-1151.png"
+              alt=""
+            />
             <h1>Home Delivery</h1>
             <p>
               Keep your systems in sync with automated web hook bases

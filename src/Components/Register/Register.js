@@ -9,7 +9,7 @@ const Register = () => {
     <div className="banner d-flex justify-content-center">
       <div>
         <h1>Create Account</h1>
-        <form onSubmit="">
+        <form>
           <input
             type="text"
             name="yourName"
@@ -30,8 +30,6 @@ const Register = () => {
             id="pasword"
             placeholder="your password"
           />
-          <br />
-          <input type="submit" value="Register" />
         </form>
         <br />
         <p>Already have an account? </p>
