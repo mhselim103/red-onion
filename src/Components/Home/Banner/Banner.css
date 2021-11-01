@@ -1,0 +1,32 @@
+.coontents {
+  padding-top: 50px;
+}
+.banner {
+  background-image: url("/src/images/bannerbackground.png");
+  background-repeat: no-repeat;
+  height: 500px !important;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+}
+.search-option {
+  border-radius: 25px;
+  background-color: #fff;
+}
+.button {
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(255, 0, 0);
+  padding: 10px;
+  width: 100px;
+  color: white !important;
+}
+
+.input-field {
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 300px;
+}
