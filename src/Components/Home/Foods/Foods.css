@@ -1,7 +1,3 @@
-.logo {
-  width: 100px;
-  height: 30px;
-}
 .is-active {
   background-color: crimson;
   color: white !important;
@@ -10,4 +6,11 @@
 .inactive {
   background-color: white !important;
   color: blue !important;
+}
+.checkout-btn {
+  background-color: gray;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  color: white;
 }
